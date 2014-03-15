@@ -1,4 +1,5 @@
 require.config({
+  baseUrl: '/',
   shim: {
     underscore: {
       exports: '_'
@@ -14,10 +15,17 @@ require.config({
   paths: {
     jquery: '../bower_components/jquery/dist/jquery',
     backbone: '../bower_components/backbone/backbone',
-    underscore: '../bower_components/underscore/underscore'
+    underscore: '../bower_components/underscore/underscore',
+    text: '../bower_components/requirejs-text/text'
   }
 });
 
-require(['backbone'], function (Backbone) {
-
+require(['jquery'], function ($) {
+  $('#load-module-1').on('click', function () {
+    require(['scripts/modules/module1/main'], function (Module1) {
+      new Module1({
+        el: document.querySelector('.module-1')
+      });
+    });
+  });
 });
