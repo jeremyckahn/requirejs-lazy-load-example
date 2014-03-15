@@ -1,0 +1,17 @@
+{
+  "name": "requirejs-lazy-load-example",
+  "version": "0.0.0",
+  "authors": [
+    "Jeremy Kahn <jeremyckahn@gmail.com>"
+  ],
+  "description": "An example of a lazy-loaded web app powered by RequireJS with a build process",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
