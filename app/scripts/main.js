@@ -28,4 +28,12 @@ require(['jquery'], function ($) {
       });
     });
   });
+
+  $('#load-module-2').on('click', function () {
+    require(['scripts/modules/module2/main'], function (Module2) {
+      new Module2({
+        el: document.querySelector('.module-2')
+      });
+    });
+  });
 });
