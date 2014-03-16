@@ -20,7 +20,21 @@ require.config({
   }
 });
 
-require(['jquery'], function ($) {
+require([
+
+  'jquery',
+
+  // List Backbone as a dependency here so that it is included at build time.
+  // The lazy-loaded modules will use it.
+  'backbone'
+
+], function (
+
+  $
+
+) {
+  'use strict';
+
   $('#load-module-1').on('click', function () {
     require(['app/scripts/modules/module1/main'], function (Module1) {
       new Module1({
@@ -36,4 +50,5 @@ require(['jquery'], function ($) {
       });
     });
   });
+
 });
