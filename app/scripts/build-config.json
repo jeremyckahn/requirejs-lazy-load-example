@@ -1,10 +1,10 @@
 {
   "mainConfigFile": "main.js",
-  "baseUrl": "../../",
-  "out": "../../dist/scripts/out.js",
+  "baseUrl": "../",
+  "out": "../../dist/scripts/main.js",
   "name": "main",
   "optimize": "none",
   "paths": {
-    "main": "app/scripts/main"
+    "main": "scripts/main"
   }
 }

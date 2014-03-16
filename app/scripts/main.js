@@ -13,10 +13,12 @@ require.config({
     }
   },
   paths: {
-    jquery: 'app/bower_components/jquery/dist/jquery',
-    backbone: 'app/bower_components/backbone/backbone',
-    underscore: 'app/bower_components/underscore/underscore',
-    text: 'app/bower_components/requirejs-text/text'
+    jquery: 'bower_components/jquery/dist/jquery',
+    backbone: 'bower_components/backbone/backbone',
+    underscore: 'bower_components/underscore/underscore',
+    text: 'bower_components/requirejs-text/text',
+    module1: 'scripts/modules/module1/main',
+    module2: 'scripts/modules/module2/main'
   }
 });
 
@@ -24,9 +26,11 @@ require([
 
   'jquery',
 
-  // List Backbone as a dependency here so that it is included at build time.
-  // The lazy-loaded modules will use it.
-  'backbone'
+  // List these dependencies explicitly so that they are included at build
+  // time.  The lazy-loaded modules will use them.
+  'underscore',
+  'backbone',
+  'text'
 
 ], function (
 
@@ -36,7 +40,7 @@ require([
   'use strict';
 
   $('#load-module-1').on('click', function () {
-    require(['app/scripts/modules/module1/main'], function (Module1) {
+    require(['scripts/modules/module1/main'], function (Module1) {
       new Module1({
         el: document.querySelector('.module-1')
       });
@@ -44,7 +48,7 @@ require([
   });
 
   $('#load-module-2').on('click', function () {
-    require(['app/scripts/modules/module2/main'], function (Module2) {
+    require(['scripts/modules/module2/main'], function (Module2) {
       new Module2({
         el: document.querySelector('.module-2')
       });

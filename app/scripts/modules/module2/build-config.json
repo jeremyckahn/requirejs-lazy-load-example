@@ -1,13 +1,13 @@
 {
-  "out": "../../../../dist/scripts/modules/module2/out.js",
-  "name": "module2",
+  "baseUrl": "../../../",
+  "out": "../../../../dist/scripts/modules/module2/main.js",
+  "name": "scripts/modules/module2/main",
   "optimize": "none",
   "stubModules": [
     "text"
   ],
   "paths": {
-    "module2": "main",
-    "text": "../../../bower_components/requirejs-text/text",
+    "text": "bower_components/requirejs-text/text",
     "jquery": "empty:",
     "backbone": "empty:",
     "underscore": "empty:"
