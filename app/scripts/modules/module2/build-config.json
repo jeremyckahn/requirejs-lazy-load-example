@@ -1,0 +1,18 @@
+{
+  "out": "../../../../dist/scripts/modules/module2/out.js",
+  "name": "module2",
+  "optimize": "none",
+  "stubModules": [
+    "text"
+  ],
+  "paths": {
+    "module2": "main",
+    "text": "../../../bower_components/requirejs-text/text",
+    "jquery": "empty:",
+    "backbone": "empty:",
+    "underscore": "empty:"
+  },
+  "exclude": [
+    "text"
+  ]
+}
