@@ -1,3 +1,5 @@
+// This config object serves double-duty, as app/script/build-config.json uses
+// this file as it's base config file
 require.config({
   baseUrl: './',
   shim: {
@@ -16,9 +18,7 @@ require.config({
     jquery: 'bower_components/jquery/dist/jquery',
     backbone: 'bower_components/backbone/backbone',
     underscore: 'bower_components/underscore/underscore',
-    text: 'bower_components/requirejs-text/text',
-    module1: 'scripts/modules/module1/main',
-    module2: 'scripts/modules/module2/main'
+    text: 'bower_components/requirejs-text/text'
   }
 });
 
